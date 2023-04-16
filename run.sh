@@ -1,5 +1,4 @@
 
-
 echo "*--- c++ native (opt-level=3) ----*"
 g++ --version
 g++ prime.cpp -o prime -g -O3
@@ -20,6 +19,18 @@ sleep 5 # cool down cpu
 
 ./prime
 rm ./prime
+echo "" 
+
+
+
+echo "*-------- java (open-jdk) --------*"
+javac --version
+javac Prime.java
+
+sleep 5 # cpu cool down
+
+java Prime
+rm Prime.class
 echo "" 
 
 

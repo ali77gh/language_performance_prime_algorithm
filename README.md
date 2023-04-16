@@ -1,5 +1,5 @@
 # Performance Test
-is_prime function implemented in many languages in same algorithm to compare different languages and runtimes
+is_prime function implemented in many languages in same algorithm to compare speed of different languages and runtimes.
 
 
 # How to run:
@@ -8,6 +8,7 @@ is_prime function implemented in many languages in same algorithm to compare dif
 ```
 
 # Result:
+Tests run on: <b>Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz</b>
 ```
 *--- c++ native (opt-level=3) ----*
 g++ (Debian 10.2.1-6) 10.2.1 20210110
@@ -49,7 +50,6 @@ Python 3.9.2
 602489
 68955.783203125
 
-
 ```
 
 # Table of times
@@ -66,7 +66,9 @@ Python 3.9.2
 
 # Contribute
 1. Optimize your favorite programming language
-2. Add new language or new runtime.
+2. Add new language.
+3. Add new Runtime.
+4. Share your test result.
 
 # TODO
 - [x] Python codon

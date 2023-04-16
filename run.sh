@@ -68,6 +68,18 @@ echo ""
 
 
 
+echo "*--------- python codon ----------*"
+codon --version
+codon build -release -exe prime.py
+
+sleep 5 # cpu cool down
+
+./prime
+rm ./prime
+echo "" 
+
+
+
 echo "*------------ python -------------*"
 python3 --version
 

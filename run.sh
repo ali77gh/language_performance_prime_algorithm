@@ -66,3 +66,13 @@ sleep 5 # cpu cool down
 rm ./prime.exe
 echo "" 
 
+
+
+echo "*------------ python -------------*"
+python3 --version
+
+sleep 5 # cpu cool down
+
+python3 prime.py
+echo "" 
+

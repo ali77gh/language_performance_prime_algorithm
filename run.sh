@@ -1,6 +1,6 @@
 
 echo "*--- c++ native (opt-level=3) ----*"
-g++ --version
+g++ --version | head -n 1
 g++ prime.cpp -o prime -g -O3
 
 sleep 5 # cpu cool down

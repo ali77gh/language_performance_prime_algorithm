@@ -41,3 +41,15 @@ node --version
 sleep 5 # cool down cpu
 
 node prime.js
+
+
+
+echo "*------------ c# Mono ------------*"
+mcs --version
+mcs prime.cs
+
+sleep 5 # cpu cool down
+
+mono ./prime.exe
+rm ./prime.exe
+echo "" 

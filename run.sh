@@ -53,3 +53,16 @@ sleep 5 # cpu cool down
 mono ./prime.exe
 rm ./prime.exe
 echo "" 
+
+
+
+echo "*---------- dart native ----------*"
+dart --version
+dart compile exe prime.dart
+
+sleep 5 # cpu cool down
+
+./prime.exe
+rm ./prime.exe
+echo "" 
+

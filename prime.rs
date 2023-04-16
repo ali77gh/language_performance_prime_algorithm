@@ -28,5 +28,5 @@ fn main() {
     let end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_millis();
     
     println!("{}",c);
-    println!("{}",end-start);
+    println!("{}ms",end-start);
 }

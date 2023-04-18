@@ -1,7 +1,17 @@
 
+echo "*--- c native (opt-level=3) ----*"
+gcc --version | head -n 1
+gcc prime.cpp -o prime -lm
+
+sleep 5 # cpu cool down
+
+./prime
+rm ./prime
+echo "" 
+
 echo "*--- c++ native (opt-level=3) ----*"
 g++ --version | head -n 1
-g++ prime.cpp -o prime -g -O3
+g++ prime.c -o prime -g -O3
 
 sleep 5 # cpu cool down
 

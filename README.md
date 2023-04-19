@@ -72,5 +72,5 @@ Python 3.9.2
 
 # TODO
 - [x] Python codon
-- [ ] Golang
+- [x] Golang
 - [ ] Rust nightly

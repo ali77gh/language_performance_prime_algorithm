@@ -88,3 +88,14 @@ sleep 5 # cpu cool down
 python3 prime.py
 echo "" 
 
+
+
+echo "*---------- go ----------*"
+go version
+go build ./prime.go
+
+sleep 5 # cpu cool down
+
+./prime.exe
+rm ./prime.exe
+echo ""

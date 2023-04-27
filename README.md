@@ -27,15 +27,18 @@ lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p'
 | Ranking | Language | Runtime/Compiler | Time      |  n% slower then C   |
 |---------|----------|------------------|-----------|---------------------|
 | #1      | C        | GCC              | 3.55s     | Winner              |
-| #2      | C++      | G++              | 3.56s     | 0.1%                |
-| #3      | Rust     | Native 1.65.0    | 4.72s     | 13%                 |
-| #4      | Java     | OpenJDK 11       | 5.60s     | 15%                 |
-| #5      | Js       | Nodejs 12        | 5.89s     | 16%                 |
-| #6      | C#       | Mono 6.8         | 6.41s     | 18%                 |
-| #7      | Dart     | Dart 2.17.0      | 7.55s     | 21%                 |
-| #8      | Python   | Codon 0.16.0     | 10.89s    | 30%                 |
-| #9      | Go       | Go 1.20.3        | 12.85s    | 36%                 |
-| #10     | Python   | Python 3.9.2     | 95.13s    | 267%                |
+| #2      | C++      | G++              | 3.56s     | 0.2%                |
+| #3      | Rust     | Native 1.67.1    | 4.72s     | 33%                 |
+| #4      | Java     | OpenJDK 17       | 5.60s     | 57%                 |
+| #5      | Js       | Nodejs 12        | 5.89s     | 66%                 |
+| #6      | C#       | Mono 6.8         | 6.41s     | 80%                 |
+| #7      | Dart     | Dart 2.19.0      | 7.55s     | 112%                |
+| #8      | Python   | Codon 0.16.0     | 10.89s    | 206%                |
+| #9      | Go       | Go 1.20.3        | 12.85s    | 261%                |
+| #10     | Python   | Python 3.9.2     | 95.13s    | 2576%               |
+
+n% slower formulla: <br>
+( (LanguageTime - WinnerTime) * 100 ) / WinnerTime
 
 # Contribute
 1. Optimize your favorite programming language

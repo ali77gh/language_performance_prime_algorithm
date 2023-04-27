@@ -105,6 +105,18 @@ echo ""
 echo ""
 
 
+echo "*------------ pascal -------------*"
+fpc ./src/prime.pas
+
+sleep 5 # cpu cool down
+
+./src/prime
+
+rm ./src/prime.o
+rm ./src/prime
+echo ""
+
+
 echo "*------------ python -------------*"
 python3 --version
 

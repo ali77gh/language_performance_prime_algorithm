@@ -35,7 +35,8 @@ lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p'
 | #7      | Dart     | Dart 2.19.0      | 7.55s     | 112%                |
 | #8      | Python   | Codon 0.16.0     | 10.89s    | 206%                |
 | #9      | Go       | Go 1.20.3        | 12.85s    | 261%                |
-| #10     | Python   | Python 3.9.2     | 95.13s    | 2576%               |
+| #10     | Pascal   | FPC 3.2.2        | 13.51s    | 280%                |
+| #11     | Python   | Python 3.9.2     | 95.13s    | 2576%               |
 
 n% slower formulla: <br>
 ( (LanguageTime - WinnerTime) * 100 ) / WinnerTime

@@ -45,6 +45,16 @@ go version go1.20.3 linux/amd64
 602489
 12851ms
 
+*------------ pascal -------------*
+Free Pascal Compiler version 3.2.2 [2021/05/16] for x86_64
+Copyright (c) 1993-2021 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling ./src/prime.pas
+Linking ./src/prime
+38 lines compiled, 0.2 sec
+602489
+13511ms
+
 *------------ python -------------*
 Python 3.9.2
 602489

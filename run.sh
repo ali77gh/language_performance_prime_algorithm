@@ -1,5 +1,5 @@
 
-echo "*--- c native (opt-level=3) ----*"
+echo "*---- c native (opt-level=3) -----*"
 gcc --version | head -n 1
 gcc ./src/prime.c -o prime -lm -g -O3
 
@@ -55,7 +55,7 @@ node --version
 sleep 5 # cool down cpu
 
 node ./src/prime.js
-
+echo "" 
 
 
 echo "*------------ c# Mono ------------*"
@@ -88,8 +88,8 @@ codon build -release -exe ./src/prime.py
 
 sleep 5 # cpu cool down
 
-./prime
-rm ./prime
+./src/prime
+rm ./src/prime
 echo "" 
 
 
@@ -101,6 +101,7 @@ sleep 5 # cpu cool down
 
 ./prime
 rm ./prime
+echo ""
 echo ""
 
 

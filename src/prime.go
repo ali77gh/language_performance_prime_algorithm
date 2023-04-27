@@ -30,5 +30,5 @@ func main() {
     }
     fmt.Println(c)
     end := float64(time.Now().UnixMilli())
-    fmt.Printf("Execution time: %vms", end-start)
+    fmt.Printf("%vms", end-start)
 }

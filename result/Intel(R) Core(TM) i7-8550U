@@ -1,0 +1,52 @@
+*---- c native (opt-level=3) -----*
+gcc (Debian 10.2.1-6) 10.2.1 20210110
+602489
+3553ms
+
+*--- c++ native (opt-level=3) ----*
+g++ (Debian 10.2.1-6) 10.2.1 20210110
+602489
+3569ms
+
+*--- rust native (opt-level=3) ---*
+rustc 1.67.1 (d5a82bbd2 2023-02-07)
+602489
+4724ms
+
+*-------- java (open-jdk) --------*
+javac 17.0.3
+602489
+5606ms
+
+*------------ nodejs -------------*
+v12.22.12
+602489
+5892ms
+
+*------------ c# Mono ------------*
+Mono C# compiler version 6.8.0.105
+602489
+6419ms
+
+*---------- dart native ----------*
+Dart SDK version: 2.19.6 (stable) (Tue Mar 28 13:41:04 2023 +0000) on "linux_x64"
+Info: Compiling with sound null safety.
+Generated: /home/Ali/temp/language_performance_prime_algorithm/src/prime.exe
+602489
+7556ms
+
+*--------- python codon ----------*
+0.16.0
+602489
+10895.2
+
+*-------------- go ---------------*
+go version go1.20.3 linux/amd64
+602489
+12851ms
+
+*------------ python -------------*
+Python 3.9.2
+602489
+95134.47827148438
+

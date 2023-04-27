@@ -4,73 +4,42 @@ is_prime function implemented in many languages in same algorithm to compare spe
 
 # How to run:
 ```bash
-./run.sh
+./run.sh 
 ```
 
 # Result:
-Tests run on: <b>Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz</b>
+see [result](https://github.com/ali77gh/language_performance_prime_algorithm/tree/master/result)
+
+### Add your result:
+```bash
+./run.sh > "./result/YOUR_CPU_MODEL_HERE"
 ```
-*--- c++ native (opt-level=3) ----*
-g++ (Debian 10.2.1-6) 10.2.1 20210110
-602489
-3193ms
-
-*--- rust native (opt-level=3) ---*
-rustc 1.65.0 (897e37553 2022-11-02)
-602489
-3608ms
-
-*-------- java (open-jdk) --------*
-javac 11.0.12
-602489
-4670ms
-
-*------------ nodejs -------------*
-v12.22.12
-602489
-4778ms
-
-*------------ c# Mono ------------*
-Mono C# compiler version 6.8.0.105
-602489
-5555ms
-
-*---------- dart native ----------*
-Dart SDK version: 2.17.0 (stable) on "linux_x64"
-602489
-5952ms
-
-*--------- python codon ----------*
-0.16.0
-602489
-10247.4
-
-*------------ python -------------*
-Python 3.9.2
-602489
-68955.783203125
-
+Example:
+```bash
+./run.sh > "./result/Intel(R) Core(TM) i7-8550U"
+```
+Get cpu model by running:
+```bash
+lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p'
 ```
 
-# Table of times
-| Ranking | Language | Runtime/Compiler | Time      |  n% slower then C++ |
+# My Laptop (Intel(R) Core(TM) i7-8550U)
+| Ranking | Language | Runtime/Compiler | Time      |  n% slower then C   |
 |---------|----------|------------------|-----------|---------------------|
-| #1      | C++      | G++              | 3.19s     | NaN                 |
-| #2      | Rust     | Native 1.65.0    | 3.60s     | 12%                 |
-| #3      | Java     | OpenJDK 11       | 4.67s     | 46%                 |
-| #4      | Js       | Nodejs 12        | 4.77s     | 49%                 |
-| #5      | C#       | Mono 6.8         | 5.55s     | 73%                 |
-| #6      | Dart     | Dart 2.17.0      | 5.95s     | 86%                 |
-| #7      | Python   | Codon 0.16.0     | 10.24s    | 321%                |
-| #8      | Python   | Python 3.9.2     | 68.95s    | 2161%               |
+| #1      | C        | GCC              | 3.55s     | Winner              |
+| #2      | C++      | G++              | 3.56s     | 0.1%                |
+| #3      | Rust     | Native 1.65.0    | 4.72s     | 13%                 |
+| #4      | Java     | OpenJDK 11       | 5.60s     | 15%                 |
+| #5      | Js       | Nodejs 12        | 5.89s     | 16%                 |
+| #6      | C#       | Mono 6.8         | 6.41s     | 18%                 |
+| #7      | Dart     | Dart 2.17.0      | 7.55s     | 21%                 |
+| #8      | Python   | Codon 0.16.0     | 10.89s    | 30%                 |
+| #9      | Go       | Go 1.20.3        | 12.85s    | 36%                 |
+| #10     | Python   | Python 3.9.2     | 95.13s    | 267%                |
 
 # Contribute
 1. Optimize your favorite programming language
 2. Add new language.
 3. Add new Runtime.
 4. Share your test result.
-
-# TODO
-- [x] Python codon
-- [x] Golang
-- [ ] Rust nightly
+5. Add your result.

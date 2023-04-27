@@ -21,7 +21,7 @@ int main() {
         if (is_prime(i))
             c += 1;
     }
-    printf("Found %d Prime Number\n", c);
-    printf("in %ldms\n", (clock() - start)/1000);
+    printf("%d\n", c);
+    printf("%ldms\n", (clock() - start)/1000);
     return 0;
 }

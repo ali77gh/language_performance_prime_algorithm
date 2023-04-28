@@ -24,7 +24,7 @@ lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p'
 ```
 
 # My Laptop (Intel(R) Core(TM) i7-8550U)
-| Ranking | Language | Runtime/Compiler | Time      |  n% slower then C   |
+| Ranking | Language | Runtime/Compiler | Time      |  n% slower than C   |
 |---------|----------|------------------|-----------|---------------------|
 | #1      | C        | GCC              | 3.55s     | Winner              |
 | #2      | C++      | G++              | 3.56s     | 0.2%                |

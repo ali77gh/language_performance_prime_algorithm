@@ -139,7 +139,17 @@ sleep 5 # cpu cool down
 python3 ./src/prime.py
 echo "" 
 
+echo "*-------------- erlang ---------------*"
+erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
+erlc -o src ./src/prime.erl
 
+sleep 5
+
+erl -pa src -noshell -s prime main -s init stop
+
+rm ./src/prime.beam
+echo ""
+echo ""
 
 
 echo "*------------ Php -------------*"
@@ -157,4 +167,3 @@ sleep 5 # cpu cool down
 
 Rscript ./src/prime.R
 echo "" 
-

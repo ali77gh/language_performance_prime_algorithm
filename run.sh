@@ -156,5 +156,12 @@ echo "*------------ R -------------*"
 sleep 5 # cpu cool down
 
 Rscript ./src/prime.R
-echo "" 
+echo ""
 
+echo "*-------------- erlang ---------------*"
+erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
+erlc -o src ./src/prime.erl
+erl -pa src -noshell -s prime main -s init stop
+
+rm ./src/prime.beam
+echo ""

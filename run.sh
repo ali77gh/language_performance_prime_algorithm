@@ -126,3 +126,21 @@ python3 ./src/prime.py
 echo "" 
 
 
+
+
+echo "*------------ Php -------------*"
+
+sleep 5 # cpu cool down
+
+php ./src/prime.php
+echo "" 
+
+
+
+echo "*------------ R -------------*"
+
+sleep 5 # cpu cool down
+
+Rscript ./src/prime.R
+echo "" 
+

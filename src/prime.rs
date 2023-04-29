@@ -6,7 +6,7 @@ fn is_prime(n: u32) -> bool {
     }
 
     let end = (n as f32).sqrt() as u32;
-    (2..=end).any(|i| n % i == 0) == false
+    !(2..=end).any(|i| n % i == 0)
 }
 
 fn main() {

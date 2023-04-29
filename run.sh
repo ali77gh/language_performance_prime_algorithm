@@ -136,3 +136,20 @@ erl -pa src -noshell -s prime main -s init stop
 rm ./src/prime.beam
 echo ""
 echo ""
+
+
+echo "*------------ Php -------------*"
+
+sleep 5 # cpu cool down
+
+php ./src/prime.php
+echo "" 
+
+
+
+echo "*------------ R -------------*"
+
+sleep 5 # cpu cool down
+
+Rscript ./src/prime.R
+echo "" 

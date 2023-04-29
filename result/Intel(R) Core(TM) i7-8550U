@@ -1,49 +1,53 @@
-*---- c native (opt-level=3) -----*
+*------- assembly (nasm) ---------*
+NASM version 2.15.05
+602489
+3215
+*---- c native (opt-level=3) -----*
 gcc (Debian 10.2.1-6) 10.2.1 20210110
 602489
-3553ms
+3618ms
 
 *--- c++ native (opt-level=3) ----*
 g++ (Debian 10.2.1-6) 10.2.1 20210110
 602489
-3569ms
+3642ms
 
 *--- rust native (opt-level=3) ---*
 rustc 1.67.1 (d5a82bbd2 2023-02-07)
 602489
-4724ms
+4638ms
 
 *-------- java (open-jdk) --------*
 javac 17.0.3
 602489
-5606ms
+5777ms
 
 *------------ nodejs -------------*
 v12.22.12
 602489
-5892ms
+5957ms
 
 *------------ c# Mono ------------*
 Mono C# compiler version 6.8.0.105
 602489
-6419ms
+6503ms
 
 *---------- dart native ----------*
 Dart SDK version: 2.19.6 (stable) (Tue Mar 28 13:41:04 2023 +0000) on "linux_x64"
 Info: Compiling with sound null safety.
 Generated: /home/Ali/temp/language_performance_prime_algorithm/src/prime.exe
 602489
-7556ms
+7588ms
 
 *--------- python codon ----------*
 0.16.0
 602489
-10895.2
+11139.5
 
 *-------------- go ---------------*
 go version go1.20.3 linux/amd64
 602489
-12851ms
+12758ms
 
 *------------ pascal -------------*
 Free Pascal Compiler version 3.2.2 [2021/05/16] for x86_64
@@ -53,10 +57,10 @@ Compiling ./src/prime.pas
 Linking ./src/prime
 38 lines compiled, 0.2 sec
 602489
-13511ms
+14339ms
 
 *------------ python -------------*
 Python 3.9.2
 602489
-95134.47827148438
+99796.44677734375
 

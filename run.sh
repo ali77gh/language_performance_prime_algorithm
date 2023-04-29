@@ -21,7 +21,7 @@ sleep 5 # cpu cool down
 
 ./prime
 rm ./prime
-echo "" 
+echo ""
 
 
 
@@ -33,19 +33,19 @@ sleep 5 # cpu cool down
 
 ./prime
 rm ./prime
-echo "" 
+echo ""
 
 
 
 echo "*--- rust native (opt-level=3) ---*"
 rustc --version
-rustc -C opt-level=3 -C target-cpu=native ./src/prime.rs 
+rustc -C opt-level=3 -C target-cpu=native -C codegen-units=1 -C lto ./src/prime.rs
 
 sleep 5 # cool down cpu
 
 ./prime
 rm ./prime
-echo "" 
+echo ""
 
 
 
@@ -59,7 +59,7 @@ cd src
 java Prime
 rm ./Prime.class
 cd ..
-echo "" 
+echo ""
 
 
 
@@ -69,7 +69,7 @@ node --version
 sleep 5 # cool down cpu
 
 node ./src/prime.js
-echo "" 
+echo ""
 
 
 echo "*------------ c# Mono ------------*"
@@ -80,7 +80,7 @@ sleep 5 # cpu cool down
 
 mono ./src/prime.exe
 rm ./src/prime.exe
-echo "" 
+echo ""
 
 
 
@@ -92,7 +92,7 @@ sleep 5 # cpu cool down
 
 ./src/prime.exe
 rm ./src/prime.exe
-echo "" 
+echo ""
 
 
 
@@ -104,7 +104,7 @@ sleep 5 # cpu cool down
 
 ./src/prime
 rm ./src/prime
-echo "" 
+echo ""
 
 
 echo "*-------------- go ---------------*"
@@ -137,7 +137,7 @@ python3 --version
 sleep 5 # cpu cool down
 
 python3 ./src/prime.py
-echo "" 
+echo ""
 
 
 
@@ -147,7 +147,7 @@ echo "*------------ Php -------------*"
 sleep 5 # cpu cool down
 
 php ./src/prime.php
-echo "" 
+echo ""
 
 
 
@@ -156,5 +156,5 @@ echo "*------------ R -------------*"
 sleep 5 # cpu cool down
 
 Rscript ./src/prime.R
-echo "" 
+echo ""
 

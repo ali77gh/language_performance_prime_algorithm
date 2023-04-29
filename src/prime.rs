@@ -1,32 +1,21 @@
-use std::time::{SystemTime, UNIX_EPOCH};
+use std::time::Instant;
 
-
-fn is_prime(n: u64) -> bool {
+fn is_prime(n: u32) -> bool {
     if n <= 1 {
         return false;
     }
 
-    let end = (n as f64).sqrt() as u64;
-    for i in 2..=end {
-        if n % i == 0 {
-            return false;
-        }
-    }
-    true
+    let end = (n as f32).sqrt() as u32;
+    (2..=end).any(|i| n % i == 0) == false
 }
 
 fn main() {
-    let start = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_millis();
+    let start = Instant::now();
 
-    let mut c = 0;
-    for i in 0..9000000{
-        if is_prime(i){
-            c+=1;
-        }
-    }
+    let c = (0..9000000).filter(|&x| is_prime(x)).count();
 
-    let end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_millis();
-    
-    println!("{}",c);
-    println!("{}ms",end-start);
+    let elapsed = start.elapsed().as_millis();
+
+    println!("{c}");
+    println!("{elapsed}ms" );
 }

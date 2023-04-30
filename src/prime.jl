@@ -1,4 +1,4 @@
-function is_prime(n::Int64)::Bool
+function is_prime(n::UInt32)::Bool
     if n <= 1
         return false
     end
@@ -14,9 +14,9 @@ end
 
 let
     start = time()
-    c::Int32 = 0
+    c::UInt32 = 0
     for i in 0: 9000000
-        if is_prime(i)
+        @inbounds if is_prime(UInt32(i))
             c += 1
         end
     end

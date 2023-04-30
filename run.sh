@@ -39,12 +39,11 @@ echo ""
 
 echo "*--- rust native (opt-level=3) ---*"
 rustc --version
-(cd src/rust && RUSTFLAGS="-Ctarget-cpu=native" cargo build --release)
+(cd src/rust && RUSTFLAGS="-Ctarget-cpu=native" cargo build --release &> /dev/null)
 
 sleep 5 # cool down cpu
 
 ./src/rust/target/release/prime
-rm -rf ./src/rust/target
 echo ""
 
 

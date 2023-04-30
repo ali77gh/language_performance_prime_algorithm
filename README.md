@@ -24,19 +24,20 @@ lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p'
 ```
 
 # My Laptop (Intel(R) Core(TM) i7-8550U)
-| Ranking | Language | Runtime/Compiler | Time      |  n% slower than C   |
-|---------|----------|------------------|-----------|---------------------|
-| #1      | C        | GCC              | 3.55s     | Winner              |
-| #2      | C++      | G++              | 3.56s     | 0.2%                |
-| #3      | Rust     | Native 1.67.1    | 4.72s     | 33%                 |
-| #4      | Java     | OpenJDK 17       | 5.60s     | 57%                 |
-| #5      | Js       | Nodejs 12        | 5.89s     | 66%                 |
-| #6      | C#       | Mono 6.8         | 6.41s     | 80%                 |
-| #7      | Dart     | Dart 2.19.0      | 7.55s     | 112%                |
-| #8      | Python   | Codon 0.16.0     | 10.89s    | 206%                |
-| #9      | Go       | Go 1.20.3        | 12.85s    | 261%                |
-| #10     | Pascal   | FPC 3.2.2        | 13.51s    | 280%                |
-| #11     | Python   | Python 3.9.2     | 95.13s    | 2576%               |
+| Ranking | Language | Runtime/Compiler | Time      |  n% slower than Winner  |
+|---------|----------|------------------|-----------|-------------------------|
+| #1      | Assembly | NASM             | 3.21s     | Winner                  |
+| #2      | C        | GCC              | 3.61s     | 12%                     |
+| #3      | C++      | G++              | 3.64s     | 13%                     |
+| #4      | Rust     | Native 1.67.1    | 4.63s     | 44%                     |
+| #5      | Java     | OpenJDK 17       | 5.77s     | 80%                     |
+| #6      | Js       | Nodejs 12        | 5.95s     | 85%                     |
+| #7      | C#       | Mono 6.8         | 6.50s     | 102%                    |
+| #8      | Dart     | Dart 2.19.0      | 7.58s     | 136%                    |
+| #9      | Python   | Codon 0.16.0     | 11.13s    | 246%                    |
+| #10     | Go       | Go 1.20.3        | 12.75s    | 297%                    |
+| #11     | Pascal   | FPC 3.2.2        | 14.33s    | 346%                    |
+| #12     | Python   | Python 3.9.2     | 99.79s    | 3008%                   |
 
 n% slower formulla: <br>
 ( (LanguageTime - WinnerTime) * 100 ) / WinnerTime

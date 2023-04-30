@@ -1,4 +1,18 @@
 
+echo "*------- assembly (nasm) ---------*"
+nasm --version
+
+cd ./src
+nasm -f elf64 ./prime.asm
+ld -s -o prime prime.o
+cd ..
+
+sleep 5 # cpu cool down
+./src/prime
+
+rm ./src/prime.o
+rm ./src/prime
+
 echo "*---- c native (opt-level=3) -----*"
 gcc --version | head -n 1
 gcc ./src/prime.c -o prime -lm -g -O3

@@ -1,0 +1,17 @@
+[package]
+name = "prime"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mimalloc = { version = "0.1", default-features = false }
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+panic = 'abort'
+incremental = false
+overflow-checks = false
+debug-assertions = false
+debug = false

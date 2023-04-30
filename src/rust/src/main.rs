@@ -1,3 +1,6 @@
+#[global_allocator]
+static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+
 use std::time::Instant;
 
 fn is_prime(n: u32) -> bool {
@@ -17,5 +20,5 @@ fn main() {
     let elapsed = start.elapsed().as_millis();
 
     println!("{c}");
-    println!("{elapsed}ms" );
+    println!("{elapsed}ms");
 }

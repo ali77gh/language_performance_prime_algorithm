@@ -48,6 +48,18 @@ rm ./prime
 echo ""
 
 
+echo "*-------------- go ---------------*"
+go version
+go build -ldflags "-s -w" ./src/prime.go
+
+sleep 5 # cpu cool down
+
+./prime
+rm ./prime
+echo ""
+echo ""
+
+
 
 echo "*-------- java (open-jdk) --------*"
 javac --version
@@ -107,17 +119,6 @@ rm ./src/prime
 echo ""
 
 
-echo "*-------------- go ---------------*"
-go version
-go build -ldflags "-s -w" ./src/prime.go
-
-sleep 5 # cpu cool down
-
-./prime
-rm ./prime
-echo ""
-echo ""
-
 
 echo "*------------ pascal -------------*"
 fpc ./src/prime.pas
@@ -140,15 +141,12 @@ python3 ./src/prime.py
 echo ""
 
 
-
-
 echo "*------------ Php -------------*"
 
 sleep 5 # cpu cool down
 
 php ./src/prime.php
 echo ""
-
 
 
 echo "*------------ R -------------*"

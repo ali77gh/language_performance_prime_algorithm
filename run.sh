@@ -109,7 +109,7 @@ echo ""
 
 echo "*-------------- go ---------------*"
 go version
-go build ./src/prime.go
+go build -ldflags "-s -w" ./src/prime.go
 
 sleep 5 # cpu cool down
 

@@ -1,14 +1,15 @@
 #include <iostream>
 #include <math.h>
 #include <time.h>
+#include <cstdint>
 
-bool is_prime(int n) {
+bool is_prime(uint32_t n) {
     if (n <= 1) {
         return false;
     }
     
-    int end = int(sqrt(n));
-    for (int i = 2; i <= end; i++) {
+    uint32_t end = uint32_t(sqrt(n));
+    for (uint32_t i = 2; i <= end; i++) {
         if (n % i == 0) {
             return false;
         }
@@ -18,8 +19,8 @@ bool is_prime(int n) {
 
 int main() {
     clock_t start = clock();
-    int c = 0;
-    for (int i = 0; i < 9000000; i++) {
+    uint32_t c = 0;
+    for (uint32_t i = 0; i < 9000000; i++) {
         if (is_prime(i)) {
             c += 1;
         }
@@ -28,4 +29,3 @@ int main() {
     std::cout << (clock() - start)/1000 << "ms" << std::endl;
     return 0;
 }
-

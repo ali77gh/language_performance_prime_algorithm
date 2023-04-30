@@ -24,6 +24,7 @@ func isPrime(n int32) bool {
 func main() {
 	start := time.Now()
 	c := 0
+
 	var i int32
 	for i = 0; i < 9000000; i++ {
 		if isPrime(i) {
@@ -32,7 +33,6 @@ func main() {
 	}
 	fmt.Println(c)
 
-	end := time.Since(start).String()
-
-	fmt.Println(end)
+	duration := time.Since(start)
+	fmt.Printf("%s\n", duration)
 }

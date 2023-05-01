@@ -12,8 +12,9 @@ function run_assembly {
     sleep 5 # cpu cool down
     ./src/prime
 
-    rm ./src/prime.o
-    rm ./src/prime
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.o" ] && rm ./src/prime.o
+    [ -f "./src/prime" ] && rm ./src/prime
 }
 
 function run_c_native {
@@ -24,7 +25,8 @@ function run_c_native {
     sleep 5 # cpu cool down
 
     ./prime
-    rm ./prime
+    # check if file exists before attempting to remove it
+    [ -f "./prime" ] && rm ./prime
     echo ""
 }
 
@@ -36,7 +38,8 @@ function run_cpp_native {
     sleep 5 # cpu cool down
 
     ./prime
-    rm ./prime
+    # check if file exists before attempting to remove it
+    [ -f "./prime" ] && rm ./prime
     echo ""
 }
 
@@ -48,7 +51,8 @@ function run_rust_native {
     sleep 5 # cool down cpu
 
     ./prime
-    rm ./prime
+    # check if file exists before attempting to remove it
+    [ -f "./prime" ] && rm ./prime
     echo ""
 }
 
@@ -60,7 +64,8 @@ function run_go {
     sleep 5 # cpu cool down
 
     ./prime
-    rm ./prime
+    # check if file exists before attempting to remove it
+    [ -f "./prime" ] && rm ./prime
     echo ""
     echo ""
 }
@@ -74,7 +79,8 @@ function run_java {
 
     cd src
     java Prime
-    rm ./Prime.class
+    # check if file exists before attempting to remove it
+    [ -f "./Prime.class" ] && rm ./Prime.class
     cd ..
     echo ""
 }
@@ -97,7 +103,8 @@ function run_csharp_mono {
     sleep 5 # cpu cool down
 
     mono ./src/prime.exe
-    rm ./src/prime.exe
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.exe" ] && rm ./src/prime.exe
     echo ""
 }
 
@@ -109,7 +116,8 @@ function run_dart_native {
     sleep 5 # cpu cool down
 
     ./src/prime.exe
-    rm ./src/prime.exe
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.exe" ] && rm ./src/prime.exe
     echo ""
 }
 
@@ -121,7 +129,8 @@ function run_python_codon {
     sleep 5 # cpu cool down
 
     ./src/prime
-    rm ./src/prime
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime" ] && rm ./src/prime
     echo ""
 }
 
@@ -132,9 +141,9 @@ function run_pascal {
     sleep 5 # cpu cool down
 
     ./src/prime
-
-    rm ./src/prime.o
-    rm ./src/prime
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.o" ] && rm ./src/prime.o
+    [ -f "./src/prime" ] && rm ./src/prime
     echo ""
 }
 
@@ -144,7 +153,11 @@ function run_python {
 
     sleep 5 # cpu cool down
 
+    python3 --version
+    sleep 5 # cpu cool down
     python3 ./src/prime.py
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.py" ] && rm ./src/prime.py
     echo ""
 }
 
@@ -154,6 +167,8 @@ function run_php {
     sleep 5 # cpu cool down
 
     php ./src/prime.php
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.php" ] && rm ./src/prime.php
     echo ""
 }
 
@@ -163,6 +178,8 @@ function run_r {
     sleep 5 # cpu cool down
 
     Rscript ./src/prime.R
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.R" ] && rm ./src/prime.R
     echo ""
 }
 
@@ -172,7 +189,8 @@ function run_erlang {
     erlc -o src ./src/prime.erl
     erl -pa src -noshell -s prime main -s init stop
 
-    rm ./src/prime.beam
+    # check if file exists before attempting to remove it
+    [ -f "./src/prime.beam" ] && rm ./src/prime.beam
     echo ""
 }
 

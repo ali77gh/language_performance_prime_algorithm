@@ -15,7 +15,7 @@ fn is_prime(n: u32) -> bool {
 fn main() {
     let start = Instant::now();
 
-    let c = (0..9000000).filter(|&x| is_prime(x)).count();
+    let c = (0..9_000_000).filter(|&x| is_prime(x)).count();
 
     let elapsed = start.elapsed().as_millis();
 

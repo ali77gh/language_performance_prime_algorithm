@@ -46,7 +46,7 @@ n% slower formulla: <br>
 ( (LanguageTime - WinnerTime) * 100 ) / WinnerTime
 
 # Contribute
-1. Optimize your favorite programming language <b>Without changing algorithm</b>
+1. Optimize your favorite programming language <b>Without changing algorithm</b> and without using concurrency.
 2. Add new language by using <b>same algorithm</b>.
 3. Add new Runtime.
 4. Share your test result.

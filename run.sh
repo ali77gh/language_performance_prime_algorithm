@@ -193,40 +193,62 @@ function run_erlang {
     [ -f "./src/prime.beam" ] && rm ./src/prime.beam
     echo ""
 }
+#!/bin/bash
+
+# Define an associative array to map language names to function names
+declare -A langs=(
+    ["assembly"]="run_assembly"
+    ["c"]="run_c_native"
+    ["cpp"]="run_cpp_native"
+    ["rust"]="run_rust_native"
+    ["go"]="run_go"
+    ["java"]="run_java"
+    ["nodejs"]="run_nodejs"
+    ["csharp_mono"]="run_csharp_mono"
+    ["dart"]="run_dart_native"
+    ["python_codon"]="run_python_codon"
+    ["pascal"]="run_pascal"
+    ["python"]="run_python"
+    ["php"]="run_php"
+    ["r"]="run_r"
+    ["erlang"]="run_erlang"
+)
+
+# Define a function to display the help message
+function display_help {
+    echo "Usage: $0 [LANGUAGE]"
+    echo ""
+    echo "Run code in various programming languages."
+    echo ""
+    echo "If no argument is provided, the script will run code in all supported"
+    echo "languages. Otherwise, provide a language name to run the corresponding"
+    echo "code. Supported languages are:"
+    echo ""
+    for lang in "${!langs[@]}"; do
+        echo "- $lang"
+    done
+    echo ""
+    echo "Examples:"
+    echo "  # Run code in all supported languages"
+    echo "  $0"
+    echo ""
+    echo "  # Run C++ code"
+    echo "  $0 cpp"
+}
 
 if [ $# -eq 0 ]; then
-    run_assembly
-    run_c_native
-    run_cpp_native
-    run_rust_native
-    run_go
-    run_java
-    run_nodejs
-    run_csharp_mono
-    run_dart_native
-    run_python_codon
-    run_pascal
-    run_python
-    run_php
-    run_r
-    run_erlang
+    # Loop through all languages and call their corresponding functions
+    for lang in "${!langs[@]}"; do
+        ${langs["$lang"]}
+    done
+elif [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+    # Display the help message if requested by the user
+    display_help
 else
-    case $1 in
-        "assembly" ) run_assembly ;;
-        "c_native" ) run_c_native ;;
-        "cpp_native" ) run_cpp_native ;;
-        "rust_native" ) run_rust_native ;;
-        "go" ) run_go ;;
-        "java" ) run_java ;;
-        "nodejs" ) run_nodejs ;;
-        "csharp_mono" ) run_csharp_mono ;;
-        "dart_native" ) run_dart_native ;;
-        "python_codon" ) run_python_codon ;;
-        "pascal" ) run_pascal ;;
-        "python" ) run_python ;;
-        "php" ) run_php ;;
-        "r" ) run_r ;;
-        "erlang" ) run_erlang ;;
-        * ) echo "Invalid choice";;
-    esac
+    # Check if the input argument is a valid language name and call its corresponding function
+    if [[ ${langs[$1]+_} ]]; then
+        ${langs[$1]}
+    else
+        echo "Invalid choice"
+    fi
 fi

@@ -56,6 +56,17 @@ function run_rust_native {
     echo ""
 }
 
+function run_julia {
+    echo "*------------- julia -------------*"
+    julia --version
+
+    sleep 5 # cpu cool down
+
+    julia ./src/prime.jl
+    echo ""
+    echo ""
+}
+
 function run_go {
     echo "*-------------- go ---------------*"
     go version
@@ -196,6 +207,7 @@ declare -A langs=(
     ["cpp"]="run_cpp_native"
     ["rust"]="run_rust_native"
     ["go"]="run_go"
+    ["julia"]="run_julia"
     ["java"]="run_java"
     ["nodejs"]="run_nodejs"
     ["csharp_mono"]="run_csharp_mono"

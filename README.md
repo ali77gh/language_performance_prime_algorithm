@@ -59,14 +59,15 @@ Note: times are 5% more or less on different runs, so C and C++ can win sometime
 | #3      | C++      | G++              | 3.15s  | 1.6%                  |
 | #4      | Rust     | Native 1.67.1    | 3.31s  | 6.7%                  |
 | #5      | Go       | Go 1.20.3        | 3.81s  | 22%                   |
-| #6      | Java     | OpenJDK 17       | 5.73s  | 84%                   |
-| #7      | Js       | Nodejs 12        | 5.85s  | 88%                   |
-| #8      | C#       | Mono 6.8         | 6.54s  | 110%                  |
-| #9      | Dart     | Dart 2.19.0      | 7.11s  | 129%                  |
-| #10     | Python   | Codon 0.16.0     | 10.89s | 251%                  |
-| #11     | Pascal   | FPC 3.2.2        | 13.68s | 341%                  |
-| #12     | PHP      | PHP 7.4.33       | 30.24s | 875%                  |
-| #13     | Python   | Python 3.9.2     | 99.79s | 3008%                 |
+| #6      | Julia    | Julia 1.8.5      | 3.87s  | 24%                   |
+| #7      | Java     | OpenJDK 17       | 5.73s  | 84%                   |
+| #8      | Js       | Nodejs 12        | 5.85s  | 88%                   |
+| #9      | C#       | Mono 6.8         | 6.54s  | 110%                  |
+| #10     | Dart     | Dart 2.19.0      | 7.11s  | 129%                  |
+| #11     | Python   | Codon 0.16.0     | 10.89s | 251%                  |
+| #12     | Pascal   | FPC 3.2.2        | 13.68s | 341%                  |
+| #13     | PHP      | PHP 7.4.33       | 30.24s | 875%                  |
+| #14     | Python   | Python 3.9.2     | 99.79s | 3008%                 |
 
 The `n% Slower than Winner` column shows the percent difference between the time taken by each language and the fastest language (Assembly).
 

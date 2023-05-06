@@ -172,6 +172,7 @@ function run_python {
 
 function run_php {
     echo "*------------ Php -------------*"
+    php --version
 
     sleep 5 # cpu cool down
 
@@ -181,6 +182,7 @@ function run_php {
 
 function run_r {
     echo "*------------ R -------------*"
+    Rscript --version
 
     sleep 5 # cpu cool down
 

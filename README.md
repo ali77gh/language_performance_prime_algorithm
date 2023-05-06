@@ -68,6 +68,7 @@ Note: times are 5% more or less on different runs, so C and C++ can win sometime
 | #12     | Pascal   | FPC 3.2.2        | 13.68s | 341%                  |
 | #13     | PHP      | PHP 7.4.33       | 30.24s | 875%                  |
 | #14     | Python   | Python 3.9.2     | 99.79s | 3008%                 |
+| #15     | R        | Rscript 4.0.4    | 240.0s | 7641%                 |
 
 The `n% Slower than Winner` column shows the percent difference between the time taken by each language and the fastest language (Assembly).
 

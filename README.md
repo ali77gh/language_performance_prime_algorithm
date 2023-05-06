@@ -27,7 +27,6 @@ If no argument is provided, the script will run code in all supported languages.
 - python
 - php
 - r
-- erlang
 
 ### Examples
 ```bash

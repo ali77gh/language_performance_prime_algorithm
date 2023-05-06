@@ -190,17 +190,6 @@ function run_r {
     echo ""
 }
 
-function run_erlang {
-    echo "*-------------- erlang ---------------*"
-    erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
-    erlc -o src ./src/prime.erl
-    erl -pa src -noshell -s prime main -s init stop
-
-    # check if file exists before attempting to remove it
-    [ -f "./src/prime.beam" ] && rm ./src/prime.beam
-    echo ""
-}
-#!/bin/bash
 
 # Define an associative array to map language names to function names
 declare -A langs=(
@@ -219,7 +208,6 @@ declare -A langs=(
     ["python"]="run_python"
     ["php"]="run_php"
     ["r"]="run_r"
-    ["erlang"]="run_erlang"
 )
 
 # Define a function to display the help message

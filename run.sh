@@ -156,8 +156,6 @@ function run_python {
     python3 --version
     sleep 5 # cpu cool down
     python3 ./src/prime.py
-    # check if file exists before attempting to remove it
-    [ -f "./src/prime.py" ] && rm ./src/prime.py
     echo ""
 }
 
@@ -167,8 +165,6 @@ function run_php {
     sleep 5 # cpu cool down
 
     php ./src/prime.php
-    # check if file exists before attempting to remove it
-    [ -f "./src/prime.php" ] && rm ./src/prime.php
     echo ""
 }
 
@@ -178,8 +174,6 @@ function run_r {
     sleep 5 # cpu cool down
 
     Rscript ./src/prime.R
-    # check if file exists before attempting to remove it
-    [ -f "./src/prime.R" ] && rm ./src/prime.R
     echo ""
 }
 

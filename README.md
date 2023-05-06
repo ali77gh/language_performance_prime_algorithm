@@ -65,7 +65,8 @@ Note: times are 5% more or less on different runs, so C and C++ can win sometime
 | #9      | Dart     | Dart 2.19.0      | 7.11s  | 129%                  |
 | #10     | Python   | Codon 0.16.0     | 10.89s | 251%                  |
 | #11     | Pascal   | FPC 3.2.2        | 13.68s | 341%                  |
-| #12     | Python   | Python 3.9.2     | 99.79s | 3008%                 |
+| #12     | PHP      | PHP 7.4.33       | 30.24s | 875%                  |
+| #13     | Python   | Python 3.9.2     | 99.79s | 3008%                 |
 
 The `n% Slower than Winner` column shows the percent difference between the time taken by each language and the fastest language (Assembly).
 

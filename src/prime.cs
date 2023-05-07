@@ -5,7 +5,7 @@ class Program{
         if (n <= 1) {
             return false;
         }
-        var end = Math.Sqrt(n);
+        var end = (int)Math.Sqrt(n);
         for(int i = 2 ; i <= end ; i++)
             if (n % i == 0) {
                 return false;

@@ -46,7 +46,7 @@ function run_cpp_native {
 function run_rust_native {
     echo "*--- rust native (opt-level=3) ---*"
     rustc --version
-    rustc -C opt-level=3 -C target-cpu=native -C codegen-units=1 -C lto ./src/prime.rs
+    rustc -C opt-level=3 -C target-cpu=native -C codegen-units=1 -C lto -C overflow-checks=off ./src/prime.rs
 
     sleep 5 # cool down cpu
 

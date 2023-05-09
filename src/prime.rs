@@ -6,13 +6,23 @@ fn is_prime(n: u32) -> bool {
     }
 
     let end = (n as f32).sqrt() as u32;
-    !(2..=end).any(|i| n % i == 0)
+    for i in 2..=end {
+        if n % i == 0 {
+            return false;
+        }
+    }
+    true
 }
 
 fn main() {
     let start = Instant::now();
 
-    let c = (0..9000000).filter(|&x| is_prime(x)).count();
+    let mut c= 0;
+    for i in 0..9000000{
+        if is_prime(i){
+            c+=1;
+        }
+    }
 
     let elapsed = start.elapsed().as_millis();
 

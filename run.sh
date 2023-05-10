@@ -164,7 +164,6 @@ function run_python {
 
     sleep 5 # cpu cool down
 
-    python3 --version
     sleep 5 # cpu cool down
     python3 ./src/prime.py
     echo ""

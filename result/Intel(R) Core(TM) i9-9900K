@@ -1,0 +1,85 @@
+*--------- python codon ----------*
+0.16.0
+602489
+10633.3
+
+*------------ pascal -------------*
+Free Pascal Compiler version 3.2.2+dfsg-9ubuntu1 [2022/04/11] for x86_64
+Copyright (c) 1993-2021 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling ./src/prime.pas
+Linking ./src/prime
+38 lines compiled, 0.1 sec
+602489
+12522ms
+
+*-------- java (open-jdk) --------*
+javac 11.0.18
+602489
+4951ms
+
+*---------- dart native ----------*
+Dart SDK version: 2.19.6 (stable) (Unknown timestamp) on "linux_x64"
+Info: Compiling with sound null safety.
+Generated: /root/test/language_performance_prime_algorithm/src/prime.exe
+602489
+6420ms
+
+*------------ nodejs -------------*
+v12.22.9
+602489
+5188ms
+
+*------------- julia -------------*
+julia version 1.8.1
+Primes: 602489
+Time: 3.5147268772125244 (s)
+
+
+*------------ R -------------*
+Rscript (R) version 4.3.0 (2023-04-21)
+[1] 602487
+[1] 201460.9
+
+*--- c++ native (opt-level=3) ----*
+g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
+602489
+3395ms
+
+*---- c native (opt-level=3) -----*
+gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
+602489
+3429ms
+
+*------------ python -------------*
+Python 3.10.6
+Python 3.10.6
+602489
+80675.49536132812
+
+*------------ Php -------------*
+PHP 8.1.2-1ubuntu2.11 (cli) (built: Feb 22 2023 22:56:18) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.2, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.2-1ubuntu2.11, Copyright (c), by Zend Technologies
+602489
+22073.414794922
+*------------ c# Mono ------------*
+Mono C# compiler version 6.8.0.105
+602489
+4639ms
+
+*-------------- go ---------------*
+go version go1.18.1 linux/amd64
+602489
+3175ms
+
+*--- rust native (opt-level=3) ---*
+rustc 1.69.0 (84c898d65 2023-04-16)
+602489
+3094ms
+
+*------- assembly (nasm) ---------*
+NASM version 2.15.05
+602489
+2695

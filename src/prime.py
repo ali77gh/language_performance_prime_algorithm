@@ -3,11 +3,13 @@ import time
 
 
 def is_prime(n):
-    if n <= 1:
+    if n==2:
+        return True
+    if n <= 1 or not n&1:
         return False
 
     end = int(math.sqrt(n))
-    for i in range(2, end+1):
+    for i in range(3, end+1,2):
         if n % i == 0:
             return False
     return True

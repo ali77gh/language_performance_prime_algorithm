@@ -1,5 +1,20 @@
 #!/bin/bash
 
+
+function run_ruby {
+    echo "*------- ruby ---------*"
+    
+    gem update --system
+    gem install cmath
+    ruby  -v
+
+    cd ./src
+    ruby  ./ruby.rb
+
+    sleep 5 # cpu cool down
+    ./src/prime
+}
+
 function run_assembly {
     echo "*------- assembly (nasm) ---------*"
     nasm --version
@@ -207,6 +222,7 @@ declare -A langs=(
     ["python"]="run_python"
     ["php"]="run_php"
     ["r"]="run_r"
+    ["ruby"]="run_ruby"
 )
 
 # Define a function to display the help message

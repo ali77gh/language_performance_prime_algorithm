@@ -204,6 +204,15 @@ function run_r {
     echo ""
 }
 
+function run_chap {
+    echo "*------------ Chap -------------*"
+    chap --version
+
+    sleep 5 # cpu cool down
+
+    chap ./src/prime.chp
+    echo ""
+}
 
 # Define an associative array to map language names to function names
 declare -A langs=(
@@ -223,6 +232,7 @@ declare -A langs=(
     ["php"]="run_php"
     ["r"]="run_r"
     ["ruby"]="run_ruby"
+    ["chap"]="run_chap"
 )
 
 # Define a function to display the help message

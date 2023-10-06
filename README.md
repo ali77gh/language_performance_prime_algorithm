@@ -27,13 +27,14 @@ If no argument is provided, the script will run code in all supported languages.
 - python
 - php
 - r
+- [chap](https://github.com/ali77gh/Chap)
 
 ### Examples
 ```bash
 # Run code in all supported languages
 ./run.sh
 
-# Run C++ code
+# Run specific language
 ./run.sh cpp
 ```
 
@@ -69,6 +70,7 @@ Note: times are 5% more or less on different runs, so C and C++ can win sometime
 | #14     | Python   | Python 3.11.3    | 82.31s | 2545%                 |
 | #15     | Ruby     | Ruby 3.2.2       | 85.55s | 2641%                 |
 | #16     | R        | Rscript 4.0.4    | 240.0s | 7641%                 |
+| #17     | [Chap](https://github.com/ali77gh/Chap)     | chap 1.0.1       | 1025s  | 32964%                |
 
 The `n% Slower than Winner` column shows the percent difference between the time taken by each language and the fastest language (Assembly).
 

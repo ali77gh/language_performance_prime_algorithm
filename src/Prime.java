@@ -2,16 +2,13 @@ import java.lang.Math;
 class Prime {
     
     static boolean is_prime(int n) {
-        if ((n <= 1)) {
-            return false;
-        }
+        if(n <= 1) return false;
         
-        var end = Math.sqrt(n);
+        int end = (int) Math.sqrt(n);
         for (int i = 2; i <= end; i++) {
-            if (((n % i) == 0)) {
+            if((n % i) == 0) {
                 return false;
             }
-            
         }
         
         return true;
@@ -21,10 +18,7 @@ class Prime {
         var start = System.currentTimeMillis();
         var c = 0;
         for (int i = 0; i < 9000000; i++) {
-            if (is_prime(i)) {
-                c++;
-            }
-            
+            if(is_prime(i)) c++;
         }
         
         var end = System.currentTimeMillis();

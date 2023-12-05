@@ -29,8 +29,10 @@ If no argument is provided, the script will run code in all supported languages.
 - php
 - r
 - [chap](https://github.com/ali77gh/Chap)
+- lua
 
 ### Examples
+
 ```bash
 # Run code in all supported languages
 ./run.sh
@@ -82,8 +84,6 @@ Formula: ((LanguageTime - WinnerTime) * 100) / WinnerTime
 
 You can contribute to this repository in one of the following ways:
 
-1. Optimize your favorite programming language <b>without changing the algorithm</b> and without using concurrency.
-2. Add a new language by using <b>the same algorithm</b>.
+1. Optimize your favorite programming language **without changing the algorithm** and without using concurrency.
+2. Add a new language by using **the same algorithm**.
 3. Add a new runtime.
-4. Share your test results.
-5. Add your result to the `result` directory.

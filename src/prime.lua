@@ -13,12 +13,12 @@ end
 
 start = os.time(os.date("!*t"))
 c = 0
-for i =0 , 89999999  , 1 do
+for i =0 , 8999999  , 1 do
     if is_prime(i) then
-        c = 1 +c
+        c = c + 1
     end
 end
 
 _end = os.time(os.date("!*t"))
 print(c)
-print(_end - start )
+print((_end - start)*1000 .. "ms")

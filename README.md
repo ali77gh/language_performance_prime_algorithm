@@ -13,6 +13,7 @@ To run code in various programming languages, use the `run.sh` script:
 If no argument is provided, the script will run code in all supported languages. Otherwise, provide a language name to run the corresponding code.
 
 ### Supported Languages
+
 - assembly
 - c
 - cpp
@@ -67,10 +68,11 @@ Note: times are 5% more or less on different runs, so C and C++ can win sometime
 | #11     | Python   | Codon 0.16.0     | 10.89s | 251%                  |
 | #12     | Pascal   | FPC 3.2.2        | 13.68s | 341%                  |
 | #13     | PHP      | PHP 8.2.5        | 26.32s | 749%                  |
-| #14     | Python   | Python 3.11.3    | 82.31s | 2545%                 |
-| #15     | Ruby     | Ruby 3.2.2       | 85.55s | 2641%                 |
-| #16     | R        | Rscript 4.0.4    | 240.0s | 7641%                 |
-| #17     | [Chap](https://github.com/ali77gh/Chap)     | chap 1.0.1       | 1025s  | 32964%                |
+| #14     | Lua      | Lua 5.2.4        | 34.00s | 996%                  |
+| #15     | Python   | Python 3.11.3    | 82.31s | 2545%                 |
+| #16     | Ruby     | Ruby 3.2.2       | 85.55s | 2641%                 |
+| #17     | R        | Rscript 4.0.4    | 240.0s | 7641%                 |
+| #18     | [Chap](https://github.com/ali77gh/Chap)     | chap 1.0.1       | 1025s  | 32964%                |
 
 The `n% Slower than Winner` column shows the percent difference between the time taken by each language and the fastest language (Assembly).
 

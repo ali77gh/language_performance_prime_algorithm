@@ -204,6 +204,15 @@ function run_r {
     echo ""
 }
 
+function run_lua {
+    echo "*------------ Lua -------------*"
+    lua -v
+
+    sleep 5 # cpu cool down
+
+    lua ./src/prime.lua
+}
+
 function run_chap {
     echo "*------------ Chap -------------*"
     chap --version
@@ -233,6 +242,7 @@ declare -A langs=(
     ["r"]="run_r"
     ["ruby"]="run_ruby"
     ["chap"]="run_chap"
+    ["lua"]="run_lua"
 )
 
 # Define a function to display the help message

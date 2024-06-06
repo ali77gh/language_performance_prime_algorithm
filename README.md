@@ -74,7 +74,7 @@ Note: times are 5% more or less on different runs, so C and C++ can win sometime
 | #15     | Python   | Python 3.11.3    | 82.31s | 2545%                 |
 | #16     | Ruby     | Ruby 3.2.2       | 85.55s | 2641%                 |
 | #17     | R        | Rscript 4.0.4    | 240.0s | 7641%                 |
-| #18     | [Chap](https://github.com/ali77gh/Chap)     | chap 1.0.1       | 1025s  | 32964%                |
+| #18     | [Chap](https://github.com/ali77gh/Chap)     | Chap 2.2.2       | 602s  | 19319%                |
 
 The `n% Slower than Winner` column shows the percent difference between the time taken by each language and the fastest language (Assembly).
 

@@ -184,6 +184,15 @@ function run_python {
     echo ""
 }
 
+function run_perl {
+    echo "*------------ Perl -------------*"
+    perl -l -e 'print $^V'
+
+    sleep 5 # cpu cool down
+    perl ./src/prime.pl
+    echo ""
+}
+
 function run_php {
     echo "*------------ Php -------------*"
     php --version
@@ -243,6 +252,7 @@ declare -A langs=(
     ["ruby"]="run_ruby"
     ["chap"]="run_chap"
     ["lua"]="run_lua"
+    ["perl"]="run_perl"
 )
 
 # Define a function to display the help message
